@@ -14,9 +14,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-left">
         <Link to="/" className="navbar-logo">Subject Withdrawal Portal</Link>
-      </div>
       <div className="navbar-right">
         {!user ? (
           <>
