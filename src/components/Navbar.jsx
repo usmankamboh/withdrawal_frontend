@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-left">
         <Link to="/" className="navbar-logo flex items-center gap-2">
-          Student Withdrawal Portal
+          Subject Withdrawal Portal
         </Link>
       </div>
       <div className="navbar-right">

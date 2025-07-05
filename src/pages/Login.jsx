@@ -16,20 +16,6 @@ const Login = () => {
     email: Yup.string().email("Invalid email").required("Email is required"),
     password: Yup.string().min(6, "Minimum 6 characters").required("Password is required"),
   });
-
-  // const handleSubmit = async (values, { setSubmitting }) => {
-  //   try {
-  //     const res = await API.post("/auth/login", values);
-  //     localStorage.setItem("user", JSON.stringify(res.data.user)); 
-  //     login(res.data);
-  //     navigate("/dashboard");
-  //   } catch (err) {
-  //     alert(err.response?.data?.message || "Login failed");
-  //   } finally {
-  //     setSubmitting(false);
-  //   }
-  // };
-
   const handleSubmit = async (values, { setSubmitting }) => {
   try {
     const res = await API.post("/auth/login", values);
