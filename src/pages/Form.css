@@ -1,61 +1,54 @@
-/* Form.css */
-
-/* ✅ Prevent scroll on entire page */
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow: hidden; /* Remove vertical and horizontal scroll bars */
-  height: 100%;
-  width: 100%;
-  font-family: sans-serif;
-}
-
-/* ✅ Center the form */
 .auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;        /* Full screen height */
-  width: 100vw;         /* Full screen width */
-  overflow: hidden;     /* Prevent internal scroll */
-  background-color: #f5f5f5;
+  min-height: 80vh;
+  background-color: #f1f5f9;
 }
 
-/* ✅ Form box styling */
 .auth-card {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-  padding: 2rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  border-radius: 12px;
-  background-color: #ffffff;
 }
 
-/* ✅ Input fields */
+.auth-card h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #1e3a8a;
+}
+
 .auth-input {
   width: 100%;
   padding: 0.75rem;
   margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  transition: border 0.3s;
 }
 
-/* ✅ Submit button */
+.auth-input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
 .auth-button {
   width: 100%;
   padding: 0.75rem;
-  background-color: #007bff;
+  background-color: #2563eb;
   color: white;
-  font-weight: bold;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* ✅ Validation errors */
-.error {
-  color: red;
-  font-size: 0.875rem;
-  margin-bottom: 0.5rem;
+.auth-button:hover {
+  background-color: #1d4ed8;
 }
