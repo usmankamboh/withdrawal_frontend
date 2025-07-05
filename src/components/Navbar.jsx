@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
@@ -17,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <Link to="/" className="navbar-logo flex items-center gap-2">Subject Withdrawal Portal</Link>
+        <Link to="/" className=" navbar-link flex items-center gap-2">Subject Withdrawal Portal</Link>
       </div>
       <div className="navbar-right">
         {!user ? (

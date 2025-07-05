@@ -10,14 +10,6 @@
   flex-wrap: wrap; /* allow wrapping on smaller screens */
 }
 
-.navbar-logo {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(1.2rem, 2vw, 1.8rem); /* responsive size */
-  font-weight: 700;
-  color: white;
-  letter-spacing: 0.5px;
-}
-
 .navbar-right {
   display: flex;
   align-items: center;
