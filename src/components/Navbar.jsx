@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
-import './Navbar.css';
-import { useNavigate } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
@@ -16,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <Link to="/" className=" navbar-link flex items-center gap-2">Subject Withdrawal Portal</Link>
+        <Link to="/" className="navbar-logo">Subject Withdrawal Portal</Link>
       </div>
       <div className="navbar-right">
         {!user ? (
@@ -26,8 +25,12 @@ const Navbar = () => {
           </>
         ) : (
           <>
-            {user.email !== "mariakamboh@gmail.com" && <Link to="/dashboard" className="navbar-link">Dashboard</Link>}
-            {user.email === "mariakamboh@gmail.com" && <Link to="/admin" className="navbar-link"></Link>}
+            {user.email !== "mariakamboh@gmail.com" && (
+              <Link to="/dashboard" className="navbar-link">Dashboard</Link>
+            )}
+            {user.email === "mariakamboh@gmail.com" && (
+              <Link to="/admin" className="navbar-link">Admin</Link>
+            )}
             <button className="navbar-logout" onClick={handleLogout}>Logout</button>
           </>
         )}
@@ -35,6 +38,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
 
 export default Navbar;
