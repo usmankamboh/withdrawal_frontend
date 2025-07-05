@@ -16,6 +16,7 @@
 .navbar-logo {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  align-items: center;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
