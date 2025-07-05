@@ -1,0 +1,40 @@
+/* src/pages/Withdraw.css */
+.withdraw-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  background-color: #f8fafc;
+}
+
+.withdraw-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.withdraw-card h2 {
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.withdraw-card p {
+  color: #475569;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.withdraw-button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
