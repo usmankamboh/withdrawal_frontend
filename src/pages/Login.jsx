@@ -53,6 +53,13 @@ const Login = () => {
             <ErrorMessage name="password" component="div" className="error" />
 
             <button className="auth-button" type="submit">Login</button>
+
+            <div style={{ marginTop: "10px", textAlign: "center" }}>
+              Have no account?{" "}
+              <a href="/register" style={{ color: "blue", textDecoration: "underline" }}>
+                Register
+              </a>
+            </div>
           </Form>
         </Formik>
       </div>

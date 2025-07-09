@@ -10,32 +10,32 @@ const Register = () => {
   const initialValues = { name: "", email: "", password: "" };
 
   const validationSchema = Yup.object({
-  name: Yup.string()
-    .matches(/^[A-Za-z ]+$/, "Name can only contain letters and spaces")
-    .required("Name is required"),
-  email: Yup.string()
-    .email("Invalid email format")
-    .required("Email is required"),
-  password: Yup.string()
-    .min(6, "Password must be at least 6 characters")
-    .required("Password is required"),
-});
+    name: Yup.string()
+      .matches(/^[A-Za-z ]+$/, "Name can only contain letters and spaces")
+      .required("Name is required"),
+    email: Yup.string()
+      .email("Invalid email format")
+      .required("Email is required"),
+    password: Yup.string()
+      .min(6, "Password must be at least 6 characters")
+      .required("Password is required"),
+  });
 
- const handleSubmit = async (values, { setSubmitting }) => {
-  console.log("Trying to register:", values); // 👈 add this
+  const handleSubmit = async (values, { setSubmitting }) => {
+    console.log("Trying to register:", values); // 👈 add this
 
-  try {
-    const res = await API.post("/auth/register", values);
-    console.log("Success:", res.data); // 👈 add this
-    alert("Registered successfully! Now login.");
-    navigate("/login");
-  } catch (err) {
-    console.error("Error:", err); // 👈 full error
-    alert(err.response?.data?.message || "Registration failed");
-  } finally {
-    setSubmitting(false);
-  }
-};
+    try {
+      const res = await API.post("/auth/register", values);
+      console.log("Success:", res.data); // 👈 add this
+      alert("Registered successfully! Now login.");
+      navigate("/login");
+    } catch (err) {
+      console.error("Error:", err); // 👈 full error
+      alert(err.response?.data?.message || "Registration failed");
+    } finally {
+      setSubmitting(false);
+    }
+  };
   return (
     <div className="auth-container">
       <div className="auth-card">
@@ -52,6 +52,12 @@ const Register = () => {
             <ErrorMessage name="password" component="div" className="error" />
 
             <button className="auth-button" type="submit">Register</button>
+            <div style={{ marginTop: "10px", textAlign: "center" }}>
+              Already have an account?{" "}
+              <a href="/login" style={{ color: "blue", textDecoration: "underline" }}>
+                Login
+              </a>
+            </div>
           </Form>
         </Formik>
       </div>

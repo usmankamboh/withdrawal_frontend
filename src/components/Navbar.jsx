@@ -18,16 +18,16 @@ const Navbar = () => {
       <div className="navbar-right">
         {!user ? (
           <>
-            <Link to="/login" className="navbar-link">Login</Link>
-            <Link to="/register" className="navbar-link">Register</Link>
+            {/* <Link to="/login" className="navbar-link">Login</Link> */}
+            {/* <Link to="/register" className="navbar-link">Register</Link> */}
           </>
         ) : (
           <>
             {user.email !== "mariakamboh@gmail.com" && (
-              <Link to="/dashboard" className="navbar-link">Dashboard</Link>
+              <Link to="/dashboard" className="navbar-link">Student Dashboard</Link>
             )}
             {user.email === "mariakamboh@gmail.com" && (
-              <Link to="/admin" className="navbar-link">Admin</Link>
+              <Link to="/admin" className="navbar-link">Admin Dashboard</Link>
             )}
             <button className="navbar-logout" onClick={handleLogout}>Logout</button>
           </>
